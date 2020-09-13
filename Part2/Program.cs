@@ -26,20 +26,20 @@ namespace Part2
             int degreesF; // we only want to accept whole number values 
             decimal degreesC; // we want to ouput a number with 1 decimal place
 
-            Console.WriteLine("Please enter a temperature in degrees Farenheit " +
+            Console.Write("Please enter a temperature in degrees Farenheit " +
                 "using a whole number: ");
             degreesF = Convert.ToInt32(Console.ReadLine());
 
             // use type casting to change the degreesF from type int to a usable
             // decimal type to allow the proper rounding to take place 
-            decimal degreesFDec = degreesF;
-
-            degreesC = (5 * (degreesFDec - 32)) / 9;
+            degreesC = (5 * ((decimal)degreesF - 32)) / 9;
 
             degreesC = Math.Round(degreesC, 1);
 
             Console.WriteLine("The equivalent temperature to " + degreesF +
               " degrees Farenheit is " + degreesC + " degrees Celsius.");
+
+            Console.ReadKey();
 
         }
     }
