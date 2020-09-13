@@ -28,11 +28,15 @@ namespace Part1
         {
             String first, last, rule, pigLatin;
 
-            first = "stephanie";
-            last = "zacharias";
-            rule = "ay";
+            Console.Write("Enter your first name: ");
+            first = Console.ReadLine();
+            first = first.ToLower();
 
-            Console.WriteLine("My name is: " + first + " " + last);
+            Console.Write("Enter your last name: ");
+            last = Console.ReadLine();
+            last = last.ToLower();
+            
+            rule = "ay";
 
             first = first.Substring(1) + first.Substring(0, 1);
             first = first.Substring(0, 1).ToUpper() + first.Substring(1);
@@ -43,7 +47,9 @@ namespace Part1
             last = last + rule;
 
             pigLatin = first + " " + last;
-            Console.WriteLine("My pig latin name is: " + pigLatin);
+            Console.WriteLine("Your pig latin name is: " + pigLatin);
+
+            Console.ReadKey();
         }
     }
 }
